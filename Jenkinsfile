@@ -6,10 +6,8 @@ pipeline {
     stage('Check Params') {
       steps {
         script {
-          params.each { param ->
-            def json = JsonOutput.toJson(params)
-            println JsonOutput.prettyPrint(json)
-          }
+          def json = JsonOutput.toJson(params)
+          println JsonOutput.prettyPrint(json)
         }
       }
     }
