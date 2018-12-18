@@ -3,7 +3,7 @@ import groovy.json.JsonOutput
 pipeline {
   agent any
   parameters {
-    payload: ''
+    string(name: 'payload', defaultValue: '{}', description: '')
   }
   stages {
     stage('Check Params') {
