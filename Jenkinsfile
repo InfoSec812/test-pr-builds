@@ -12,9 +12,7 @@ pipeline {
           echo "Environment Vars:"
           def json = JsonOutput.toJson(env)
           println JsonOutput.prettyPrint(json)
-          echo "Payload Data:"
-          json = JsonOutput.toJson(ref)
-          println JsonOutput.prettyPrint(json)
+          echo "Payload Data: ${ref}"
         }
       }
     }
