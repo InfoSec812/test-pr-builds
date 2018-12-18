@@ -2,6 +2,9 @@ import groovy.json.JsonOutput
 
 pipeline {
   agent any
+  parameters {
+    payload: ''
+  }
   stages {
     stage('Check Params') {
       steps {
