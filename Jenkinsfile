@@ -8,6 +8,8 @@ pipeline {
         script {
           def json = JsonOutput.toJson(env)
           println JsonOutput.prettyPrint(json)
+          json = JsonOutput.toJson(payload)
+          println JsonOutput.prettyPrint(json)
         }
       }
     }
