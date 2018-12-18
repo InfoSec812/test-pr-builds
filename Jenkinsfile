@@ -4,8 +4,8 @@ pipeline {
     stage('Check Params') {
       steps {
         script {
-          params.each {
-            echo it
+          params.each { param ->
+            println param
           }
         }
       }
