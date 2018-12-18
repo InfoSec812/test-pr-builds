@@ -8,7 +8,7 @@ pipeline {
         script {
           def json = JsonOutput.toJson(env)
           println JsonOutput.prettyPrint(json)
-          json = JsonOutput.toJson(params)
+          json = JsonOutput.toJson(parameters)
           println JsonOutput.prettyPrint(json)
         }
       }
