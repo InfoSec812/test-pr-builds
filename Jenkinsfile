@@ -4,7 +4,9 @@ pipeline {
     stage('Check Params') {
       steps {
         script {
-          this.binding.variables.each {k,v -> println "$k = $v"}
+          parameters.properties.each {
+            echo it
+          }
         }
       }
     }
