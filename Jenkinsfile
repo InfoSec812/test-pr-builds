@@ -13,7 +13,7 @@ pipeline {
           def json = JsonOutput.toJson(env)
           println JsonOutput.prettyPrint(json)
           echo "Payload Data:"
-          json = JsonOutput.toJson(payload)
+          json = JsonOutput.toJson(ref)
           println JsonOutput.prettyPrint(json)
         }
       }
