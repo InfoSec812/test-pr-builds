@@ -9,8 +9,10 @@ pipeline {
     stage('Check Params') {
       steps {
         script {
+          echo "Environment Vars:"
           def json = JsonOutput.toJson(env)
           println JsonOutput.prettyPrint(json)
+          echo "Payload:"
           json = JsonOutput.toJson(payload)
           println JsonOutput.prettyPrint(json)
         }
