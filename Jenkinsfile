@@ -4,7 +4,7 @@ pipeline {
     stage('Check Params') {
       steps {
         script {
-          params.properties.each {
+          params.each {
             echo it
           }
         }
