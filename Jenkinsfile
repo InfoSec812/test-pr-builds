@@ -1,3 +1,5 @@
+import groovy.json.JsonOutput
+
 pipeline {
   agent any
   stages {
@@ -5,7 +7,8 @@ pipeline {
       steps {
         script {
           params.each { param ->
-            println param
+            def json = JsonOutput.toJson(params)
+            println JsonOutput.prettyPrint(json)
           }
         }
       }
